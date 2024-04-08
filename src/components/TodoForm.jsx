@@ -21,7 +21,7 @@ function TodoForm() {
       ...todos,
       {
         id: idForTodo,
-        title: todoInput,
+        title: todoInput, 
         isComplete: false,
       },
     ]);

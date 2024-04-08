@@ -1,13 +1,19 @@
-import React from 'react'
-import Proptypes from 'prop-types';
+import React, { useContext } from 'react'
+import { TodosContext } from '../context/TodosContext';
 
-CheckAll.propTypes = {
-    checkAll: Proptypes.func.isRequired,
-}
+function CheckAll() {
+  const {todos, setTodos} = useContext(TodosContext);
 
-function CheckAll(props) {
+  function checkAll() {
+    const updatedTodos = todos.map(todo => {
+      todo.isComplete = true;
+      return todo;
+    });
+    setTodos(updatedTodos);
+  }
+  
   return (
-    <div className="button" onClick={props.checkAll}>Check All</div>
+    <div className="button" onClick={checkAll}>Check All</div>
   )
 }
 
