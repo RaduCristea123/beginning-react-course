@@ -13,10 +13,13 @@
   
   .todo-app-container {
     min-height: 100vh;
-    padding: 10px;
     background: #f3f4f6;
   }
   
+  .active {
+    font-weight: bold;
+  }
+
   .todo-app {
     margin: auto;
     margin-top: 30px;
@@ -154,6 +157,21 @@
 
   .toggles-container{
     margin-top: 20px;
+  }
+
+  nav {
+    background: white;
+    padding: 16px;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  nav ul li:not(:first-child){
+    margin-left: 16px;
   }
   
   /* Transitions */
